@@ -1,40 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="10dp"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="1dp"
+    android:paddingBottom="2dp"
     android:id="@+id/layoutMovie"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <ImageView
-        android:id="@+id/imgMovie"
-        android:layout_width="150dp"
-        android:layout_height="175dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:src="@color/purple_500"/>
-
-    <TextView
-        android:id="@+id/titleMovie"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/imgMovie"
-        android:layout_marginLeft="10dp"
-        android:text="Judul Movie"
-        android:textSize="18sp"
-        android:textColor="@color/black"/>
+        app:cardCornerRadius="20dp">
 
-    <TextView
-        android:id="@+id/descriptionMovie"
-        android:layout_width="200sp"
-        android:layout_height="wrap_content"
-        android:layout_toRightOf="@id/imgMovie"
-        android:layout_below="@id/titleMovie"
-        android:layout_marginTop="10dp"
-        android:layout_marginLeft="10dp"
-        android:text="Deskripsi Movie"
-        android:textSize="14sp"
-        android:textColor="@color/black"
-        android:maxLines="4"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#9FB2E3"
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/imgMovie"
+                android:layout_width="150dp"
+                android:layout_height="175dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:src="@color/purple_500"/>
+
+            <TextView
+                android:id="@+id/titleMovie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgMovie"
+                android:layout_marginLeft="10dp"
+                android:text="Judul Movie"
+                android:textSize="18sp"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/descriptionMovie"
+                android:layout_width="200sp"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgMovie"
+                android:layout_below="@id/titleMovie"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:text="Deskripsi Movie"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:maxLines="4"/>
+
+            </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </RelativeLayout>

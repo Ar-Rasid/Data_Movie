@@ -44,6 +44,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
                 result.setOriginalTitle(resultList.get(viewHolder.getAdapterPosition()).getOriginalTitle());
                 result.setOverview(resultList.get(viewHolder.getAdapterPosition()).getOverview());
                 result.setPosterPath(resultList.get(viewHolder.getAdapterPosition()).getPosterPath());
+                result.setVoteAverage(resultList.get(viewHolder.getAdapterPosition()).getVoteAverage());
+                result.setReleaseDate(resultList.get(viewHolder.getAdapterPosition()).getReleaseDate());
                 intent.putExtra(DetailMovieActivity.EXTRA_MOVIE, result);
                 parent.getContext().startActivity(intent);
             }
@@ -66,8 +68,9 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
         ImageView imgPoster;
-        TextView titleMovie, descriptionMovie;
+        TextView titleMovie, descriptionMovie, ratingMovie, rilisMovie;
         RelativeLayout relativeLayout;
+
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -76,6 +79,8 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MyViewHolder
             titleMovie = itemView.findViewById(R.id.titleMovie);
             descriptionMovie = itemView.findViewById(R.id.descriptionMovie);
             relativeLayout = itemView.findViewById(R.id.layoutMovie);
+            ratingMovie = itemView.findViewById(R.id.ratingMovie);
+            rilisMovie = itemView.findViewById(R.id.rilisMovie);
         }
     }
 }
